@@ -1,0 +1,21 @@
+==========================================
+SLURM_JOB_ID = 2625147
+SLURM_NODELIST = gnode053
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+/home2/manasmittal/.local/lib/python3.10/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12080). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading sentence transformer...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  47%|████▋     | 94/199 [00:00<00:00, 911.35it/s]Loading weights:  93%|█████████▎| 186/199 [00:00<00:00, 832.68it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 871.57it/s]
+
+Loading spaCy model...
+Traceback (most recent call last):
+  File "/home2/manasmittal/Analyse arguments/analyse2.py", line 142, in <module>
+    nlp = spacy.load("en_core_web_sm")
+  File "/home2/manasmittal/.local/lib/python3.10/site-packages/spacy/__init__.py", line 74, in load
+    return util.load_model(
+  File "/home2/manasmittal/.local/lib/python3.10/site-packages/spacy/util.py", line 531, in load_model
+    raise IOError(Errors.E050.format(name=name))
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
